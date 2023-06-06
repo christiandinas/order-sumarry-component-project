@@ -1,0 +1,222 @@
+:root {
+    --primary-pale-blue: hsl(225, 100%, 94%);
+    --primary-brigth-blue:  hsl(245, 75%, 52%);
+
+    --neutral-very-pale-blue: hsl(225, 100%, 98%);
+    --neutral-desaturated-blue: hsl(224, 23%, 55%);
+    --neutral-dark-blue: hsl(223, 47%, 23%);
+
+    --red-hat-font: 'Red Hat Display', sans-serif;
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: var(--primary-pale-blue);
+    font-family: var(--red-hat-font);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    height: 700px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+}
+
+.image {
+    background-image: url(../images/illustration-hero.svg);
+    height: 31%;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+
+.info {
+    height: 69%;
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.info-container {
+    margin: 40px 50px;
+}
+
+.info-container .info-container-title {
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 28px;
+}
+
+.info-container .main-paragraph {
+    text-align: center;
+    line-height: 1.4;
+    font-weight: 400;
+    margin-bottom: 25px;
+    color: var(--neutral-desaturated-blue);
+}
+
+.info-container .music-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background-color: var(--neutral-very-pale-blue);
+    margin-bottom: 35px;
+    border-radius: 12px;
+    padding: 22px;
+}
+
+.info-container .price-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.price-box .annual-plan-price {
+    color: var(--neutral-desaturated-blue);
+}
+
+.info-container .music-container a {
+    display: flex;
+    align-items: center;
+    margin-left: 75px;
+    font-size: small;
+    font-weight: 700;
+    color: var(--primary-brigth-blue);
+    
+}
+
+.info-container .music-container a:hover {
+    color: rgb(116, 108, 234);
+    cursor: pointer;
+}
+
+.btn-box {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.btn-box button {
+    height: 45px;
+    color: white;
+    background-color: rgb(54, 42, 216);
+    border: 1px solid rgb(54, 42, 216);
+    padding: 10px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    box-shadow: 5px 25px 10px rgb(221, 219, 240);
+    border-radius: 12px;
+    font-weight: 700;
+    margin-bottom: 15px;
+
+}
+
+.btn-box button:hover {
+    background-color: rgb(116, 108, 234);
+    border: 1px solid rgb(116, 108, 234);
+    cursor: pointer;
+}
+
+.cancel-order-box {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-box a {
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--neutral-desaturated-blue);
+    text-decoration: none;
+
+}
+
+.btn-box a:hover {
+    color: var(--neutral-dark-blue);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+
+    body {
+        background-image: url(../images/pattern-background-mobile.svg);
+        background-size:contain;
+    }
+
+    .card {
+        height: 600px;
+        width: 330px;
+    }
+
+    .image {
+        background-position: center;
+        background-size: cover;
+        height: 150px;
+        
+    }
+
+    .info {
+        height: 450px;
+    }
+
+    .info-container {
+        margin: 0;
+        padding: 30px;
+    }
+
+    .info-container .info-container-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .info-container .main-paragraph {
+        line-height: 1.7;
+        font-weight: 400;
+        margin-bottom: 25px;
+        color: var(--neutral-desaturated-blue);
+    }
+
+    .info-container .music-container {
+        background-color: var(--neutral-very-pale-blue);
+        margin-bottom: 35px;
+        border-radius: 12px;
+        padding: 0px;
+    }
+
+    .info-container .music-container .icon {
+        margin: 20px 0 20px 10px;
+    }
+
+    .info-container .music-container .price-box {
+        margin: 20px 0;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 0;
+    }
+
+    .info-container .music-container a {
+        margin: 20px 0 20px 20px;
+        
+    }
+    
+
+
+}
